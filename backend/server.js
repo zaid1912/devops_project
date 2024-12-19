@@ -12,7 +12,12 @@ async function main() {
     useNewUrlParser: true,
   });
   const app = express();
-  app.use(cors());
+  app.use(
+    cors({
+      origin: "http://web:3000", // Allow the frontend container to access this backend
+      methods: ["GET", "POST", "PUT", "DELETE"], // Adjust methods as necessary
+    })
+  );
   app.use(express.json());
   app.use("/api", routes);
 
