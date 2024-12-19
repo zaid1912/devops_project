@@ -14,7 +14,7 @@ async function main() {
   const app = express();
   app.use(
     cors({
-      origin: "http://web:3000", // Allow the frontend container to access this backend
+      origin: "http://54.211.34.2:3000", // Allow the frontend container to access this backend
       methods: ["GET", "POST", "PUT", "DELETE"], // Adjust methods as necessary
     })
   );
