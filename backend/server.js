@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require('cors');
+const cors = require("cors");
 const mongoose = require("mongoose");
 const port = 3001;
 const routes = require("./routes");
@@ -16,7 +16,7 @@ async function main() {
   app.use(express.json());
   app.use("/api", routes);
 
-  app.listen(port, () => {
+  app.listen(port, "0.0.0.0", () => {
     console.log(`Server is listening on port: ${port}`);
   });
 }
