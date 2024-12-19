@@ -25,7 +25,7 @@ services:
     environment: 
       MONGODB_INITDB_ROOT_USERNAME: username
       MONGODB_INITDB_ROOT_PASSWORD: password
-    # uncomment following lines to access db locally
+    # uncomment following lines to access db locally 123
     # ports:
     #   - 27017:27017
     networks: 
