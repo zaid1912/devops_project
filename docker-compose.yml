@@ -30,6 +30,15 @@ services:
     #   - 27017:27017
     networks: 
      - network-backend
+  test:
+    build: ./backend
+    command: ["npm", "test"]  # Runs the test command
+    depends_on:
+      - api
+    environment:
+      - NODE_ENV=test
+    networks:
+      - network-backend
 
 networks:
   network-backend:
